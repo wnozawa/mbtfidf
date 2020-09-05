@@ -18,12 +18,12 @@ app = Flask(__name__)
 
 #環境変数取得
 YOUR_CHANNEL_ACCESS_TOKEN = os.environ["YOUR_CHANNEL_ACCESS_TOKEN"]
-YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
+LINE_BOT_CHANNEL_SECRET = os.environ["LINE_BOT_CHANNEL_SECRET"]
 DATABASE_URL = os.environ['DATABASE_URL']
 
 
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
-handler = WebhookHandler(YOUR_CHANNEL_SECRET)
+handler = WebhookHandler(LINE_BOT_CHANNEL_SECRET)
 
 @app.route("/callback", methods=['POST'])
 def callback():
