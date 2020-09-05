@@ -26,6 +26,10 @@
     $ heroku pg:psql
 	$ {HEROKU_APP_NAME}::DATABASE=> CREATE TABLE messagelog (message TEXT, response TEXT, time TEXT);
     ```
-8.  [LINE Developersコンソール](https://developers.line.biz/console/)で、Messaging APIチャネルの［**Messaging API設定**］タブをクリックし、２つの操作。
+7.  [LINE Developersコンソール](https://developers.line.biz/console/)で、Messaging APIチャネルの［**Messaging API設定**］タブをクリックし、２つの操作。
 	-  「`https://{HEROKU_APP_NAME}.herokuapp.com/callback`」というURL形式で、Webhook URLを入力します。  
 	-  ［**Webhookの利用**］を有効にします。
+
+8. [LINE Developersコンソール](https://developers.line.biz/console/)のチャネル設定から［Messaging API設定］タブにあるQRコードを読み取って、ボットが関連づけられているLINE公式アカウントを友だち追加し、動作を確認。
+
+以上で完了です。
