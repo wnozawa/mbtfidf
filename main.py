@@ -71,7 +71,7 @@ from TFIDF import TFIDF_sims_argmax
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     # response=LSI_prediction(event.message.text, dictionary, tfidf, lsi_model, index, text_corpus)
-    sims_argmax=TFIDF_sims_argmax(event.message.text, dictionary, tfidf, index)  # text_corpus 消す
+    sims_argmax=TFIDF_sims_argmax(event.message.text, dictionary, tfidf, index)
     response=df_qa.iloc[sims_argmax,1]
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     cur = conn.cursor()
