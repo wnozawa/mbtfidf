@@ -1,0 +1,7 @@
+Flask==1.1.2
+line-bot-sdk==1.16.0
+gensim
+mecab-python3==0.996.5
+pandas
+psycopg2
+datetime
